@@ -30,7 +30,7 @@ RUN apt update && apt install -y \
 # Set /app as the Working Directory on Docker filesystem
 WORKDIR /app
 COPY . .
-
 EXPOSE 8080
-RUN chmod +x dbinstall.sh && ./dbinstall.sh
+RUN chmod +x dbinstall.sh 
+ENTRYPOINT ["/bin/bash", "/app/dbinit.sh"]
 CMD ["php -S 0.0.0.0:8080"]
