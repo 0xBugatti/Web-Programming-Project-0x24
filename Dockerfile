@@ -4,7 +4,7 @@ FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Install required packages: curl, gnupg, git, nodejs, npm
-RUN apt update && apt install -y \
+RUN apt-get update && apt-get install -y \
     git \
     unzip \
     curl \
@@ -12,9 +12,8 @@ RUN apt update && apt install -y \
     libonig-dev \
     libxml2-dev \
     zip \
-    mbstring \
-    mysql \
-    apache2 \  
+    mariadb-server \
+    apache2 \
     php \
     libapache2-mod-php \
     php-mysql \
@@ -23,7 +22,7 @@ RUN apt update && apt install -y \
     php-json \
     php-mbstring \
     php-xml \
-    php-zip 
+    php-zip \
 
 # Set /app as the Working Directory on Docker filesystem
 WORKDIR /app
