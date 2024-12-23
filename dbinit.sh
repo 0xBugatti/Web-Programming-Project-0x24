@@ -2,8 +2,8 @@
 
 # Variables for database connection
 DB_HOST="localhost"
-DB_USER="your_username"
-DB_PASS="your_password"
+DB_USER="root"
+DB_PASS=""
 DB_NAME="booking_hotels"
 
 # Path to the SQL script file
