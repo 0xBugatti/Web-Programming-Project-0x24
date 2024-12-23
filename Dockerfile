@@ -13,9 +13,7 @@ RUN apt update && apt install -y \
     libxml2-dev \
     zip \
     mbstring \
-    mysqli \
-    pdo pdo_mysql \
-    xml \
+    mysql \
     apache2 \  
     php \
     libapache2-mod-php \
