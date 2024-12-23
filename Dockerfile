@@ -29,5 +29,6 @@ WORKDIR /app
 COPY . .
 EXPOSE 8080
 RUN chmod +x dbinstall.sh 
+
 ENTRYPOINT ["/bin/bash", "/app/dbinit.sh"]
 CMD ["php -S 0.0.0.0:8080"]
